@@ -1,0 +1,71 @@
+format = """
+$os\
+$username\
+$hostname\
+$directory\
+$fossil_branch\
+$fossil_metrics\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$docker_context\
+$package\
+$c\
+$cmake\
+$golang\
+$guix_shell\
+$haskell\
+$java\
+$julia\
+$kotlin\
+$lua\
+$nodejs\
+$perl\
+$php\
+$python\
+$rust\
+$scala\
+$swift\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$direnv\
+$env_var\
+$custom\
+$sudo\
+$cmd_duration\
+$jobs\
+$battery\
+$time\
+$status\
+$container\
+$line_break\
+$shell\
+$character"""
+
+[git_branch]
+always_show_remote = true
+truncation_length = 4
+truncation_symbol = '...'
+
+[hostname]
+ssh_only = false
+ssh_symbol = "󰣀"
+format= "[$ssh_symbol$hostname]($style) "
+
+[os]
+format = "[($name)]($style):"
+style = "bold blue"
+disabled = false
+
+[username]
+show_always = true
+
+[directory]
+truncation_length = 4
+format = 'at [$path]($style)[$read_only]($read_only_style) '
+truncation_symbol = ".../"
+read_only = "󱦃"
